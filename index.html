@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+			<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+			.main{
+				perspective: 1000px;
+				transform-style: preserve-3d;
+			}
+			.mofang{
+				width: 400px;
+				height: 400px;
+				margin: 200px auto;
+				position: relative;
+				transition: all 8S;
+				transform-style: preserve-3d;
+			}
+			.mofang div{
+				width: 400px;
+				height: 400px;
+				position: absolute;
+				top: 0px;
+				left: 0;
+				opacity: 1;
+				border: 5px solid #CCCCCC;
+				transition: all 8S;
+			}
+			.front{
+				background: url(img/1.jpeg);
+				background-size: 100% 100%;
+				transform: translateZ(200px);
+			}
+			.back{
+				background: url(img/1.jpg);
+				background-size: 100% 100%;
+				transform: rotateY(180deg) translateZ(200px);
+			}
+			.left{
+				background: url(img/3.jpg);
+				background-size: 100% 100%;
+				transform: rotateY(90deg) translateZ(200PX);
+			}
+			.right{
+				background: url(img/4.jpeg);
+				background-size: 100% 100%;
+				transform: rotateY(-90deg) translateZ(200px);
+			}
+			.top{
+				background: url(img/5.jpeg);
+				background-size: 100% 100%;
+				transform: rotateX(90deg) translateZ(200px);
+			}
+			.bottom{
+				background: url(img/7.jpeg);
+				background-size: 100% 100%;
+				transform: rotateX(-90deg) translateZ(200px);
+			}
+		
+			.main:hover .mofang{
+				transform: rotate3d(-1,1,0,1080deg) scale3d(0.3,0.3,0.3);
+			}
+			.main:hover .top{
+				transform: rotateX(90deg) translateZ(700px);
+				}
+			.main:hover .bottom{
+				transform: rotateX(-90deg) translateZ(700px);
+			}
+				
+			.main:hover .left{
+				transform: rotateY(90deg) translateZ(700px);
+			}
+			.main:hover .right{
+				transform: rotateY(-90deg) translateZ(700px);
+			}
+			.main:hover .front{
+				transform:  translateZ(700px);
+			}
+			.main:hover .back{
+				transform: rotateY(180deg) translateZ(700px);
+			}		
+		</style>
+		<!--<style type="text/css">
+			.lgl{
+				width: 100px;
+				height: 100px;
+				margin: 50px auto;
+				position: relative;
+				transition: all 7S;
+				transform-style: preserve-3d;
+			}
+			.lgl div{
+				width: 100px;
+				height: 100px;
+				position: absolute;
+				top: 50px;
+				left: 0;
+				opacity: 1;
+				border: 5px solid #CCCCCC;
+				transition: all 7S;
+			}
+			
+			.front{
+				background: url(img/l5.jpg);
+				background-size: 100% 100%;
+				transform: translateZ(50px);
+			}
+			.back{
+				background: url(img/l2.jpg);
+				background-size: 100% 100%;
+				transform: rotateY(180deg) translateZ(50px);
+			}
+			.left{
+				background: url(img/l3.jpg);
+				background-size: 100% 100%;
+				transform: rotateY(90deg) translateZ(50PX);
+			}
+			.right{
+				background: url(img/l4.jpg);
+				background-size: 100% 100%;
+				transform: rotateY(-90deg) translateZ(50px);
+			}
+			.top{
+				background: url(img/l7.jpg);
+				background-size: 100% 100%;
+				transform: rotateX(90deg) translateZ(50px);
+			}
+			.bottom{
+				background: url(img/l6.jpg);
+				background-size: 100% 100%;
+				transform: rotateX(-90deg) translateZ(50px);
+			}
+			
+			
+			.main:hover .lgl{
+				transform: rotate3d(1,-1,1,720deg) scale3d(0.4,0.4,0.4);
+			}
+			.main:hover .top{
+				transform: rotateX(90deg) translateZ(200px);
+				}
+			.main:hover .bottom{
+				transform: rotateX(-90deg) translateZ(200px);
+			}
+				
+			.main:hover .left{
+				transform: rotateY(90deg) translateZ(200px);
+			}
+			.main:hover .right{
+				transform: rotateY(-90deg) translateZ(200px);
+			}
+			.main:hover .front{
+				transform:  translateZ(200px);
+			}
+			.main:hover .back{
+				transform: rotateY(180deg) translateZ(200px);
+			}
+		</style>-->
+	</head>
+	<body>
+		<div class="main">
+			<div class="mofang">
+				<div class="front"></div>
+				<div class="back"></div>
+				<div class="left"></div>
+				<div class="right"></div>
+				<div class="top"></div>
+				<div class="bottom"></div>
+			</div>
+		</div>
+		<!--<div class="main .lgl">-->
+			<!--<div class="lgl">
+				<div class="front"></div>
+				<div class="back"></div>
+				<div class="left"></div>
+				<div class="right"></div>
+				<div class="top"></div>
+				<div class="bottom"></div>
+			</div>-->
+		<!--</div>-->
+	</body>
+</html>
